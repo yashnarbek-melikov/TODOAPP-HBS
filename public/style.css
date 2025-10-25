@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background: #f8f9fa;
+   font-family: 'Inter', sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   min-height: 100vh;
+   padding: 40px 15px;
+   color: #2d2d2d;
+}
+
+/* Umumiy konteyner */
+.container {
+   background: #ffffff;
+   width: 480px;
+   padding: 40px;
+   border-radius: 12px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+   border: 1px solid #e6e6e6;
+}
+
+/* Sahifa sarlavhasi */
+.page-title {
+   text-align: left;
+   margin-bottom: 25px;
+   font-weight: 600;
+   color: #202020;
+   font-size: 22px;
+}
+
+/* FORM STYLES */
+.task-form {
+   display: flex;
+   flex-direction: column;
+   gap: 18px;
+}
+
+label {
+   font-weight: 500;
+   color: #555;
+   font-size: 14px;
+   margin-bottom: 3px;
+}
+
+input,
+textarea,
+select {
+   border: 1px solid #dcdcdc;
+   border-radius: 8px;
+   padding: 10px 12px;
+   font-size: 15px;
+   transition: 0.2s;
+   background-color: #fcfcfc;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+   border-color: #888;
+   background: #fff;
+   outline: none;
+}
+
+/* BUTTONS */
+.btn {
+   display: inline-block;
+   padding: 10px 18px;
+   border-radius: 8px;
+   font-weight: 500;
+   cursor: pointer;
+   transition: 0.2s;
+   text-decoration: none;
+   text-align: center;
+   border: 1px solid transparent;
+}
+
+.primary-btn {
+   background: #2f2f2f;
+   color: #fff;
+}
+
+.primary-btn:hover {
+   background: #1a1a1a;
+}
+
+.secondary-btn {
+   background: #f1f1f1;
+   color: #2d2d2d;
+   border-color: #ddd;
+}
+
+.secondary-btn:hover {
+   background: #e6e6e6;
+}
+
+/* TASK LIST PAGE */
+.task-list {
+   display: flex;
+   flex-direction: column;
+   gap: 14px;
+   margin-bottom: 20px;
+}
+
+/* Har bir task kartasi */
+.task-card {
+   background: #ffffff;
+   padding: 20px 22px;
+   border-radius: 10px;
+   border: 1px solid #e4e4e4;
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+   transition: 0.2s;
+}
+
+.task-card:hover {
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Task header */
+.task-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+.task-title {
+   font-size: 17px;
+   font-weight: 600;
+   color: #222;
+}
+
+.task-status {
+   padding: 4px 10px;
+   border-radius: 6px;
+   font-size: 13px;
+   font-weight: 500;
+   text-transform: capitalize;
+   background: #f3f3f3;
+   color: #555;
+   border: 1px solid #ddd;
+}
+
+.task-status.bajarilgan {
+   background: #f1fff3;
+   border-color: #b2e0b7;
+   color: #2c7a3b;
+}
+
+.task-status.bajarilmagan {
+   background: #fff5f5;
+   border-color: #e4b6b6;
+   color: #b32929;
+}
+
+.task-body {
+   font-size: 14px;
+   color: #444;
+   line-height: 1.6;
+   margin-bottom: 14px;
+}
+
+/* Harakat tugmalari */
+.task-actions {
+   display: flex;
+   gap: 10px;
+}
+
+.update-btn {
+   background: #f7f7f7;
+   color: #333;
+   border: 1px solid #ddd;
+}
+
+.update-btn:hover {
+   background: #ececec;
+}
+
+.delete-btn {
+   background: #fdf3f3;
+   color: #b33a3a;
+   border: 1px solid #e2baba;
+}
+
+.delete-btn:hover {
+   background: #fae0e0;
+}
+
+/* Umumiy linklar */
+a.btn {
+   display: block;
+   margin-top: 10px;
+}

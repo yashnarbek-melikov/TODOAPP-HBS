@@ -1,0 +1,37 @@
+<main>
+   <div class='container'>
+      <h1 class='page-title'>📝 Yangi vazifa qo‘shish</h1>
+
+      <form class='task-form' action='/task/{{task.id}}/update' method='POST'>
+         <label for='title'>Sarlavha nomi</label>
+         <input
+            type='text'
+            id='title'
+            name='title'
+            placeholder='Masalan: Dars tayyorlash'
+            value='{{task.title}}'
+            required
+         />
+
+         <label for='body'>Tanasi</label>
+         <textarea
+            id='body'
+            name='body'
+            rows='4'
+            placeholder='Masalan: HTML va CSSni o‘rganish'
+            required
+         >{{task.body}}</textarea>
+
+         <label for='status'>Holati</label>
+         <select id='status' name='status'>
+            <option value="kutilmoqda" {{#eq task.status "kutilmoqda"}}selected{{/eq}}>Kutilmoqda</option>
+            <option value="tugallangan" {{#eq task.status "tugallangan"}}selected{{/eq}}>Tugallangan</option>
+         </select>
+
+         <button type='submit' class='btn primary-btn'>
+            Yangilash
+         </button>
+         <a href='/' class='btn secondary-btn'>Barcha vazifalar</a>
+      </form>
+   </div>
+</main>

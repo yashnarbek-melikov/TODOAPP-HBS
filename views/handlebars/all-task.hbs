@@ -1,0 +1,33 @@
+<main>
+   <div class='container'>
+      <h1 class='page-title'>📋 Barcha vazifalar</h1>
+
+      <div class='task-list'>
+         {{#if tasks}}
+            {{#each tasks}}
+               <div class='task-card'>
+                  <div class='task-header'>
+                     <h2 class='task-title'>{{title}}</h2>
+                     <span class='task-status bajarilmagan'>{{status}}</span>
+                  </div>
+                  <p class='task-body'>{{body}}</p>
+                  <div class='task-actions'>
+                     <a href='task/{{id}}/edit'>
+                        <button class='btn update-btn'>✏️ Yangilash</button>
+                     </a>
+                     <form
+                        class='task-form'
+                        action='task/{{id}}/delete'
+                        method='POST'
+                     >
+                        <button class='btn delete-btn'>🗑 O‘chirish</button>
+                     </form>
+                  </div>
+               </div>
+            {{/each}}
+         {{/if}}
+      </div>
+
+      <a href='task/new' class='btn primary-btn'>➕ Yangi vazifa qo‘shish</a>
+   </div>
+</main>
