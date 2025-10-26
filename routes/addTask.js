@@ -19,5 +19,11 @@ router.post('/task', (req, res) => {
    res.redirect('/');
 });
 
+const filterTasks = id => {
+   const index = tasks.findIndex(task => task.id.toString() === id.toString());
+   tasks.splice(index, 1);
+};
+
 exports.router = router;
 exports.tasks = tasks;
+exports.filterTasks = filterTasks;

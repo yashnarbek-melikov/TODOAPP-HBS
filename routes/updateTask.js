@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const { tasks } = require('./addTask');
+const { tasks, filterTasks } = require('./addTask');
 
 router.get('/task/:id/edit', (req, res) => {
    const task = tasks[req.params.id - 1];
@@ -29,16 +29,7 @@ router.post('/task/:id/delete', (req, res) => {
       body: req.body.body,
       status: req.body.status,
    };
-   const filtered = tasks.filter(
-      atask => atask.id.toString() !== task.id.toString()
-   );
-   tasks.length = 0;
-   filtered.forEach((task, index) => {
-      tasks.push({
-         ...task,
-         id: (parseInt(index) + 1).toString(),
-      });
-   });
+   filterTasks(req.params.id);
    res.redirect('/');
 });
 
